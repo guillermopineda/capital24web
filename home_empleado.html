@@ -1,4 +1,4 @@
-{% load static %}
+
 
 <!DOCTYPE html>
 
@@ -31,11 +31,11 @@
 
     <meta name="description" content="Descarga la app Capital24 para empleados" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="apple-touch-icon" href="{% static 'images/icon.png' %}" />
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="apple-touch-icon" href='static/images/icon.png' />
+    <link rel="shortcut icon" href='static/images/favicon.ico' type="image/x-icon">
+    <link rel="stylesheet" href='static/css/normalize.css' />
+    <link rel="stylesheet" href='static/css/all.min.css' />
+    <link rel="stylesheet" href='static/css/home.css' />
 
     <meta name="theme-color" content="#fafafa" />
 </head>
@@ -67,7 +67,7 @@
         firebase.analytics();
     </script>
     <a href="https://wa.me/5215549405585?text=Me%20gustaría%20saber%20más%20información" class="whatsapp" target="_blank"> <i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.youtube.com/watch?v=5pJ5MYRENFE&list=PLOGF8mxLeFL-if3g7fiZCItnVGEMAA7lu" class="youtube" target="_blank"> <i class="fab fa-youtube"></i></a>
+    <a href="https://www.youtube.com/embed/J-GoaGw_G3w" class="youtube" target="_blank"> <i class="fab fa-youtube"></i></a>
     <header>
         <div class="barra">
             <div class="contenedor clearfix">
@@ -90,8 +90,8 @@
                     </div>
 
                     <div class="logo-1">
-                        <a href="{% url 'home' %}">
-                            <img src="{% static 'img/logo_cp24.png' %}" alt="Capital24" /></a>
+                        <a href='home.html'>
+                            <img src='static/img/logo_cp24.png' alt="Capital24" /></a>
                     </div>
 
                     <nav class="navegacion-cliente">
@@ -100,7 +100,6 @@
                         <a href="#tour">Tour</a>
                         <a href="#opinion">Opiniones</a>
                         <a href="#contacto">Contacto</a>
-                        <a href={% url 'registro_empleado' %}>Demo</a>
                         <a href="#" onclick="openForm()">Descarga</a>
                     </nav>
                     <div class="descarga-movil" onclick="openForm()">
@@ -129,7 +128,7 @@
 
                             <li>
                                 <a href="https://apps.apple.com/mx/app/capital24/id1511211734" target="_blank">
-                                    <img src="{% static 'img/AppStore.png' %}" alt="Capital24" />
+                                    <img src='static/img/AppStore.png' alt="Capital24" />
                                 </a>
                             </li>
                             <li>
@@ -138,7 +137,7 @@
 
                             <li>
                                 <a href="https://play.google.com/store/apps/details?id=com.capitalpeople.capital24" target="_blank">
-                                    <img src="{% static 'img/PlayStore.png' %}" id="proporcion-img" alt="Capital People" />
+                                    <img src='static/img/PlayStore.png'  id="proporcion-img" alt="Capital People" />
                                 </a>
                             </li>
 
@@ -236,7 +235,7 @@
         <ul class="display-funciones clearfix">
             <li>
                 <div class="display-app">
-                    <img src="{% static 'img/INICIO.png' %}" alt="Inicio Capital24" />
+                    <img src='static/img/INICIO.png' alt="Inicio Capital24" />
                     <h4>Movilidad</h4>
                     <p>
                         Ingresa a Capital24 desde cualquier dispositivo iOS y Android y conoce todas las funciones que tiene para ti
@@ -247,14 +246,14 @@
                 <div class="display-app">
 
 
-                    <img src="{% static 'img/IDENTIFICATE2.png' %}" alt="Menu Capital24" />
+                    <img src='static/img/IDENTIFICATE2.png' alt="Menu Capital24" />
                     <h4>Identifícate</h4>
                     <p>Acceso seguro con usuario y contraseña únicos</p>
                 </div>
             </li>
             <li>
                 <div class="display-app">
-                    <img src="{% static 'img/MENU.png' %}" alt="Menu Capital24" />
+                    <img src='static/img/MENU.png'  alt="Menu Capital24" />
                     <h4>Menú Fácil</h4>
                     <p>
                         Navega por cualquiera de las opciones de forma fácil y explora la app
@@ -268,8 +267,8 @@
 
     <main id="tour" class="contenedor seccion">
         <div class="contenido-principal">
-            <img class="imagen-capital24 diapositivas w3-animate-right" src="{% static 'img/inicio1.png' %}" alt="Muro Capital24" />
-            <img class="imagen-capital24 diapositivas w3-animate-right" src="{% static 'img/inicio2.png' %}" alt="Muro Capital24" />
+            <img class="imagen-capital24 diapositivas w3-animate-right" src='static/img/inicio1.png'  alt="Muro Capital24" />
+            <img class="imagen-capital24 diapositivas w3-animate-right" src='static/img/inicio2.png'  alt="Muro Capital24" />
 
 
             <div class="texto-principal ">
@@ -295,15 +294,15 @@
                     </h4>
                 </div>
             </div>
-            <img class="imagen-capital24 diapositivas_1 w3-animate-left" src="{% static 'img/INFORMACION.png' %}" alt="Menu Empleado" />
-            <img class="imagen-capital24 diapositivas_1 w3-animate-left" src="{% static 'img/INFORMACION2.png' %}" alt="Información Personal" />
-            <img class="imagen-capital24 diapositivas_1 w3-animate-left" src="{% static 'img/INFORMACION3.png' %}" alt="Información Domicilio" />
+            <img class="imagen-capital24 diapositivas_1 w3-animate-left" src='static/img/INFORMACION.png' alt="Menu Empleado" />
+            <img class="imagen-capital24 diapositivas_1 w3-animate-left" src='static/img/INFORMACION2.png' alt="Información Personal" />
+            <img class="imagen-capital24 diapositivas_1 w3-animate-left" src='static/img/INFORMACION3.png' alt="Información Domicilio" />
 
 
         </div>
         <div class="contenido-principal">
-            <img class="imagen-capital24 diapositivas_2 w3-animate-right" src="{% static 'img/pagos.png' %}" alt="Desglose de Nómina" />
-            <img class="imagen-capital24 diapositivas_2 w3-animate-right" src="{% static 'img/pagos2.png' %}" alt="Último Pago" />
+            <img class="imagen-capital24 diapositivas_2 w3-animate-right" src='static/img/pagos.png' alt="Desglose de Nómina" />
+            <img class="imagen-capital24 diapositivas_2 w3-animate-right" src='static/img/pagos2.png' alt="Último Pago" />
 
 
             <div class="texto-principal ">
@@ -345,16 +344,16 @@
                     </h4>
                 </div>
             </div>
-            <img class="imagen-capital24 diapositivas_3 w3-animate-left" src="{% static 'img/KARDEX-EMPLEADO.png' %}" alt="Kardex Empleado" />
+            <img class="imagen-capital24 diapositivas_3 w3-animate-left" src='static/img/KARDEX-EMPLEADO.png' alt="Kardex Empleado" />
 
         </div>
 
         <div class="contenido-principal">
-            <img class="imagen-capital24 diapositivas_4 w3-animate-right" src="{% static 'img/BENEFICIOS.png' %}" alt="Beneficios" />
-            <img class="imagen-capital24 diapositivas_4 w3-animate-right" src="{% static 'img/beneficios2.png' %}" alt="Beneficios Cercanos" />
-            <img class="imagen-capital24 diapositivas_4 w3-animate-right" src="{% static 'img/beneficios3.png' %}" alt="Beneficios Establecimientos" />
-            <img class="imagen-capital24 diapositivas_4 w3-animate-right" src="{% static 'img/BENEFICIOS4.png' %}" alt="Beneficios Establecimientos" />
-            <img class="imagen-capital24 diapositivas_4 w3-animate-right" src="{% static 'img/BENEFICIOS5.png' %}" alt="Beneficios Establecimientos" />
+            <img class="imagen-capital24 diapositivas_4 w3-animate-right" src='static/img/BENEFICIOS.png'  alt="Beneficios" />
+            <img class="imagen-capital24 diapositivas_4 w3-animate-right" src='static/img/beneficios2.png'  alt="Beneficios Cercanos" />
+            <img class="imagen-capital24 diapositivas_4 w3-animate-right" src='static/img/beneficios3.png'  alt="Beneficios Establecimientos" />
+            <img class="imagen-capital24 diapositivas_4 w3-animate-right" src='static/img/BENEFICIOS4.png'  alt="Beneficios Establecimientos" />
+            <img class="imagen-capital24 diapositivas_4 w3-animate-right" src='static/img/BENEFICIOS5.png'  alt="Beneficios Establecimientos" />
 
 
             <div class="texto-principal ">
@@ -380,8 +379,8 @@
                     </h4>
                 </div>
             </div>
-            <img class="imagen-capital24 diapositivas_5 w3-animate-left" src="{% static 'img/ATENCION.png' %}" alt="Contacto Capital24" />
-            <img class="imagen-capital24 diapositivas_5 w3-animate-left" src="{% static 'img/atencion2.png' %}" alt="Tarjeta Contacto Capital24" />
+            <img class="imagen-capital24 diapositivas_5 w3-animate-left" src='static/img/ATENCION.png' alt="Contacto Capital24" />
+            <img class="imagen-capital24 diapositivas_5 w3-animate-left" src='static/img/atencion2.png'  alt="Tarjeta Contacto Capital24" />
 
         </div>
     </main>
@@ -393,7 +392,7 @@
         <ul class="testimoniales-funciones clearfix">
             <li>
                 <div class="testimoniales-app">
-                    <img src="{% static 'img/testimonial_1.jpg' %}" alt="Inicio Capital24" />
+                    <img src='static/img/testimonial_1.jpg' alt="Inicio Capital24" />
                     <p>Rapidez</p>
                     <i class="fas fa-quote-left fa-2x testimonial-i"></i>
                     <p id="testimonial">
@@ -404,7 +403,7 @@
             </li>
             <li>
                 <div class="testimoniales-app">
-                    <img src="{% static 'img/testimonial_2.jpg' %}" alt="Login Capital24" />
+                    <img src='static/img/testimonial_2.jpg'  alt="Login Capital24" />
 
                     <p>Toma de Decisiones</p>
                     <i class="fas fa-quote-left fa-2x testimonial-i"></i>
@@ -418,7 +417,7 @@
         <li>
           <div class="testimoniales-app">
             <img
-              src="{% static 'img/testimonial_3.jpg' %}"
+              src='static/img/testimonial_3.jpg'
               alt="Menu Capital24"
             />
             <p>
@@ -451,7 +450,7 @@
               <a href="https://capitalpeople.mx">
                 <img
                   id="proporcion-img"
-                  src="{% static 'img/logo_cp.png' %}"
+                  src='static/img/logo_cp.png'
                   alt="Capital People"
                 />
               </a>
@@ -459,7 +458,7 @@
             <li>
               <a href="home.html">
                 <img
-                  src="{% static 'img/logo_cp24.png' %}"
+                  src='static/img/logo_cp24.png'
                   alt="Capital24"
                 />
               </a>
@@ -468,7 +467,7 @@
               <a href="https://capitalacademy.mx">
                 <img
                   id="proporcion-img"
-                  src="{% static 'img/logo_academy.png' %}"
+                  src='static/img/logo_academy.png'
                   alt="Capital Academy"
                 />
               </a>
@@ -477,7 +476,7 @@
               <a href="https://www.tdu.com.mx/capitalpeople/">
                 <img
                   id="proporcion-img-2"
-                  src="{% static 'img/log_4u.png' %}"
+                  src='static/img/log_4u.png'
                   alt="Capital Academy"
                 />
               </a>
@@ -488,7 +487,7 @@
           <h5>Contacto y <span>Atención al Cliente</span></h5>
           <div class="contacto">
             <i class="fas fa-map-marker-alt fa-2x"></i>
-            <a href="https://goo.gl/maps/247dzGtVKdjXiXPHA">
+            <a href="https://goo.gl/maps/247dzGtVKdjXiXPHA" target="_blank">
               <p>
                 Herschel 152, Col. Anzures Miguel Hidalgo, CP 11590, Ciudad de
                 Mexico
@@ -504,7 +503,7 @@
           <div class="contacto">
             <i class="fas fa-envelope-open-text fa-2x"></i>
             <a
-              href="mailto:ayuda@capital24.mx?Subject=Ayuda Capital24 - sitio web"
+              href="mailto:ayuda@capital24.mx?Subject=Ayuda Capital24 - sitio web" target="_blank"
             >
               <p>ayuda@capital24.mx</p>
             </a>
@@ -515,7 +514,7 @@
     <div class="copyright">
       Todos los Derechos Reservados Capital People &copy;
       <br>
-    <center><a href="{% url 'aviso_privacidad' %}" target="_blank">AVISO DE PRIVACIDAD</a></center>
+    <center><a href='avisoprivacidad.html' target="_blank">AVISO DE PRIVACIDAD</a></center>
     </div>
     
 
@@ -632,7 +631,7 @@
       </script>
     </section>
 
-    <script src="{% static 'js/vendor/modernizr-3.7.1.min.js' %}"></script>
+    <script src='static/js/vendor/modernizr-3.7.1.min.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -645,8 +644,8 @@
           '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
         );
     </script>
-    <script src="{% static 'js/plugins.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src='static/js/plugins.js'></script>
+    <script src='static/js/main.js'></script>
     <script>
       function openForm() {
         document.getElementById("myForm").style.display = "block";

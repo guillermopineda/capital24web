@@ -1,6 +1,3 @@
-{% load static %}
-
-
 <!DOCTYPE html>
 <html class="no-js" lang="es">
 
@@ -31,12 +28,12 @@
     <title>CAPITAL 24</title>
     <meta name="description" content="Capital24 es la aplicación móvil de Capital People ha desarrollado para crear nuevas experiencias de Servicio al Cliente" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="apple-touch-icon" href="{% static 'images/icon.png' %}" />
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href='static/images/icon.png' />
+    <link rel="shortcut icon" href='static/images/favicon.ico' type="image/x-icon">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="stylesheet" href='static/css/normalize.css' />
+    <link rel="stylesheet" href='static/css/all.min.css' />
+    <link rel="stylesheet" href='static/css/home.css' />
 
     <meta name="theme-color" content="#fafafa" />
 </head>
@@ -64,9 +61,11 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
+
+       
     </script>
     <a href="https://wa.me/5215549405585?text=Me%20gustaría%20saber%20más%20información" class="whatsapp" target="_blank"> <i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.youtube.com/watch?v=5pJ5MYRENFE&list=PLOGF8mxLeFL-if3g7fiZCItnVGEMAA7lu" class="youtube" target="_blank"> <i class="fab fa-youtube"></i></a>
+    <a href="https://www.youtube.com/embed/J-GoaGw_G3w" class="youtube" target="_blank"> <i class="fab fa-youtube"></i></a>
     <header>
         <div class="barra">
             <div class="contenedor clearfix">
@@ -74,8 +73,8 @@
                     <div class="circle"></div>
                     <div class="menu">
                         <ul>
-                            <li><a href="{% url 'home_cliente' %}">Cliente</a></li>
-                            <li><a href="{% url 'home_empleado' %}">Empleado</a></li>
+                            <li><a href='home_cliente.html'>Cliente</a></li>
+                            <li><a href='home_empleado.html'>Empleado</a></li>
 
                         </ul>
                     </div>
@@ -88,13 +87,13 @@
 
 
                     <div class="logo">
-                        <a href="{% url 'home' %}">
-                            <img src="{% static 'img/logo_cp.png' %}" alt="Capital24" /></a>
+                        <a href='home'>
+                            <img src='static/img/logo_cp.png' alt="Capital24" /></a>
                     </div>
 
                     <nav class="navegacion-principal">
-                        <a href="{% url 'home_cliente' %}">Cliente</a>
-                        <a href="{% url 'home_empleado' %}">Empleado</a>
+                        <a href='home_cliente.html'>Cliente</a>
+                        <a href='home_empleado.html'>Empleado</a>
 
                     </nav>
 
@@ -110,13 +109,13 @@
                     </p>
 
                 </div>
-                <a href="{% url 'home_cliente' %}">
-                    <img src="{% static 'img/home_cliente.png' %}" alt="Home Cliente">
+                <a href='home_cliente.html'>
+                    <img src='static/img/home_cliente.png' alt="Home Cliente">
                 </a>
 
 
-                <a href="{% url 'home_empleado' %}">
-                    <img src="{% static 'img/home_empleado.png' %}" alt="Home Empleado">
+                <a href='home_empleado.html'>
+                    <img src='static/img/home_empleado.png' alt="Home Empleado">
                 </a>
 
             </div>
@@ -124,7 +123,7 @@
         <div class="copyright">
             Todos los Derechos Reservados Capital People &copy;
             <br>
-            <center><a href="{% url 'aviso_privacidad' %}" target="_blank">AVISO DE PRIVACIDAD</a></center>
+            <center><a href='avisoprivacidad.html' target="_blank">AVISO DE PRIVACIDAD</a></center>
         </div>
     </header>
 
@@ -132,17 +131,17 @@
 
 
 
-    <script src="{% static 'js/vendor/modernizr-3.7.1.min.js' %}"></script>
+    <script src='js/vendor/modernizr-3.7.1.min.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
         window.jQuery ||
             document.write(
-                '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
+                '<script src="static/js/vendor/jquery-3.4.1.min.js"><\/script>'
             );
     </script>
-    <script src="{% static 'js/plugins.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src='static/js/plugins.js'></script>
+    <script src='static/js/main.js'></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
