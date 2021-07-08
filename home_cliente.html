@@ -1,0 +1,660 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj =
+                h.hj ||
+                function() {
+                    (h.hj.q = h.hj.q || []).push(arguments);
+                };
+            h._hjSettings = {
+                hjid: 1636884,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName("head")[0];
+            r = o.createElement("script");
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+    <meta charset="utf-8" />
+    <title>CAPITAL 24 Cliente</title>
+    <meta name="description" content="Descarga la app Capital24 para clientes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="{% static 'images/icon.png' %}" />
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+
+    <meta name="theme-color" content="#fafafa" />
+
+    <meta name="theme-color" content="#fafafa" />
+</head>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDdB5CO4-uNVXufxmHQ-TDudWDzgcPe3lY",
+            authDomain: "capital24-flutter.firebaseapp.com",
+            databaseURL: "https://capital24-flutter.firebaseio.com",
+            projectId: "capital24-flutter",
+            storageBucket: "capital24-flutter.appspot.com",
+            messagingSenderId: "596829906915",
+            appId: "1:596829906915:web:c2ccdc346ef49475c522d6",
+            measurementId: "G-VRD179G223"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <a href="https://wa.me/5215549405585?text=Me%20gustaría%20saber%20más%20información" class="whatsapp" target="_blank"> <i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.youtube.com/watch?v=5pJ5MYRENFE&list=PLOGF8mxLeFL-if3g7fiZCItnVGEMAA7lu" class="youtube" target="_blank"> <i class="fab fa-youtube"></i></a>
+    <header>
+        <div class="barra">
+            <div class="contenedor clearfix">
+                <div class="posicion-1">
+                    <div class="circle"></div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#funciones-cliente">Funciones</a></li>
+                            <li><a href="#ingreso">Acceso</a></li>
+                            <li><a href="#tour">Tour</a></li>
+                            <li><a href="#opinion">Opiniones</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="burger">
+                        <div class="x"></div>
+                        <div class="y"></div>
+                        <div class="z"></div>
+                    </div>
+
+                    <div class="logo-1">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'img/logo_cp24.png' %}" alt="Capital24" />
+                        </a>
+                    </div>
+
+                    <nav class="navegacion-cliente">
+                        <a href="#funciones-cliente">Funciones</a>
+                        <a href="#ingreso">Acceso</a>
+                        <a href="#tour">Tour</a>
+                        <a href="#opinion">Opiniones</a>
+                        <a href="#contacto">Contacto</a>
+                        <a href={% url 'registro_empleado' %}>Demo</a>
+                        <a href="#" onclick="openForm()">Descarga</a>
+                    </nav>
+                    <div class="descarga-movil" onclick="openForm()">
+                        <i class="fas fa-cloud-download-alt fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alinear">
+            <div class="contenedor contenido-home-inicio">
+                <h1>Bienvenido al mundo Capital24</h1>
+                <p>
+                    La app mas completa de Staffing que permite a socios y colaboradores tener información sobre temas de interés de forma fácil y práctica desde sus dispositivos móviles
+                </p>
+                <button class="boton boton-azul" onclick="openForm()">Descarga la App</button>
+
+                <div class="form-popup " id="myForm">
+
+
+                    <div class="descarga-beta">
+                        <br>
+                        <h1>¡Bienvenido a Capital24!</h1>
+
+                        <h2>Selecciona tu sistema operativo</h2>
+                        <ul>
+
+
+                            <li>
+                                <a href="https://apps.apple.com/mx/app/capital24/id1511211734" target="_blank">
+                                    <img src="{% static 'img/AppStore.png' %}" alt="Capital24" />
+                                </a>
+                            </li>
+                            <li>
+                                <button class="botonpop botonpop-azul" onclick="closeForm()">Cancelar</button>
+                            </li>
+
+                            <li>
+                                <a href="https://play.google.com/store/apps/details?id=com.capitalpeople.capital24" target="_blank">
+                                    <img src="{% static 'img/PlayStore.png' %}" id="proporcion-img" alt="Capital People" />
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </header>
+    <hr class="contenedor seccion" />
+    <section id="funciones-cliente" class="contenedor seccion">
+        <ul class="lista-funciones clearfix">
+            <li>
+                <div class="contenido-app">
+                    <i class="fas fa-mobile-alt fa-6x"></i>
+                    <h3>Tecnología</h3>
+                    <p>
+                        Desarrollada con tecnología de última generación, disponible para iOS y Android
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="contenido-app">
+                    <i class="fas fa-user-lock fa-6x"></i>
+                    <h3>Seguridad</h3>
+                    <p>
+                        Acceso seguro, con usuario y contraseña encriptado
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="contenido-app">
+                    <i class="far fa-comments fa-6x"></i>
+                    <h3>Comunicación</h3>
+                    <p>
+                        Muro de comunicacion, noticias, eventos y más
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="contenido-app">
+                    <i class="fas fa-folder-open fa-6x"></i>
+                    <h3>Expedientes</h3>
+                    <p>
+                        Permite consultar información del personal; su expediente, forma de servicios, datos de contacto
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="contenido-app">
+                    <i class="fas fa-history fa-6x"></i>
+                    <h3>Conectividad</h3>
+                    <p>
+                        Acceso a tu información en todo momento desde la app
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="contenido-app">
+                    <i class="fas fa-tachometer-alt fa-6x"></i>
+                    <h3>Dashboards</h3>
+                    <p>
+                        Consulta información relevante del negocio para la rápida toma de decisiones
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor-descarga ">
+            <div class="contenedor">
+                <h1>
+                    La información que necesitas en la palma de tu mano
+                </h1>
+                <p>
+                    Accede a información útil en todo momento y maximiza los resultados de tu negocio
+                </p>
+                <h3>Descarga la app ahora</h3>
+                <button class="boton boton-azul" onclick="openForm()">Descarga</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="ingreso" class="contenedor seccion ">
+        <h1 id="titulo-movil">Acceso de forma segura y fácil a Capital24</h1>
+
+        <ul class="display-funciones clearfix">
+            <li>
+                <div class="display-app">
+                    <img src="{% static 'img/INICIO.png' %}" alt="Inicio Capital24" />
+                    <h4>Movilidad</h4>
+                    <p>
+                        Ingresa a Capital24 desde cualquier dispositivo iOS y Android y conoce todas las funciones que tiene para ti
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="display-app">
+
+
+                    <img src="{% static 'img/IDENTIFICATE3.png' %}" alt="Menu Capital24" />
+                    <h4>Identifícate</h4>
+                    <p>Acceso seguro con usuario y contraseña únicos</p>
+                </div>
+            </li>
+            <li>
+                <div class="display-app">
+                    <img src="{% static 'img/MENU.png' %}" alt="Menu Capital24" />
+                    <h4>Menú Fácil</h4>
+                    <p>
+                        Navega por cualquiera de las opciones de forma fácil y explora la app
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <hr class="contenedor seccion" />
+
+    <main id="tour" class="contenedor seccion">
+        <div class="contenido-principal">
+            <img class="imagen-capital24 diapositivas w3-animate-right" src="{% static 'img/inicio1.png' %}" alt="Muro Capital24" />
+            <img class="imagen-capital24 diapositivas w3-animate-right" src="{% static 'img/inicio2.png' %}" alt="Muro Capital24" />
+
+            <div class="texto-principal ">
+                <div>
+                    <h3>
+                        Inicio
+                    </h3>
+                    <h4>
+                        Es la conexión directa a contenido de interés para tí, accede a Mi Muro, conoce los cumpleaños, comunicados y promociones disponibles para los colaboradores
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenido-principal">
+            <div class="texto-principal ">
+                <div>
+                    <h3>
+                        Información de Colaboradores
+                    </h3>
+
+                    <h4>
+                        Accede a los datos de tus colaboradores de forma inmediata, consulta su expediente electrónico, datos laborales y desglose de pago
+                    </h4>
+                </div>
+            </div>
+            <img class="imagen-capital24 diapositivas_1 w3-animate-left" src="{% static 'img/COLABORADOR.png' %}" alt="Plantilla Empleados" />
+            <img class="imagen-capital24 diapositivas_1 w3-animate-left" src="{% static 'img/COLABORADOR2.png' %}" alt="Menu Empleados" />
+            <img class="imagen-capital24 diapositivas_1 w3-animate-left" src="{% static 'img/COLABORADOR3.png' %}" alt="Información Personal" />
+
+        </div>
+        <div class="contenido-principal">
+            <img class="imagen-capital24 diapositivas_2 w3-animate-right" src="{% static 'img/INDICADORES.png' %}" alt="Indicadores de Negocio" />
+            <img class="imagen-capital24 diapositivas_2 w3-animate-right" src="{% static 'img/INDICADORES 2.png' %}" alt="Headcount" />
+            <img class="imagen-capital24 diapositivas_2 w3-animate-right" src="{% static 'img/INDICADORES3.png' %}" alt="Rotación de Personal" />
+            <img class="imagen-capital24 diapositivas_2 w3-animate-right" src="{% static 'img/INDICADORES4.png' %}" alt="Rotación de Personal" />
+
+            <img class="imagen-capital24 diapositivas_2 w3-animate-right" src="{% static 'img/INDICADORES5.png' %}" alt="Rotación de Personal" />
+
+            <div class="texto-principal ">
+                <div>
+                    <h3>Indicadores</h3>
+                    <h4>
+                        Consulta información relevante de tu negocio para la toma de decisiones, accede a gráficas e indicadores útiles en todo momento
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="seccion">
+        <div class="contenedor-descarga-1 ">
+            <div class="contenedor">
+                <h1>
+                    Ponte en contacto con Capital24 y comienza la transferencia digital de tu empresa
+                </h1>
+                <p>
+                    Conoce sus contenidos gráficos de nómina para la mejor toma de decisiones
+                </p>
+                <h3>
+                    Descarga la app ahora ti
+                </h3>
+                <button class="boton boton-azul" onclick="openForm()">Descarga</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="contenedor seccion">
+        <div class="contenido-principal">
+            <div class="texto-principal ">
+                <div>
+                    <h3>Kardex</h3>
+                    <h4>
+                        Accede a un registro mensual de ausentismos e incapacidades de tus colaboradores de forma gráfica
+                    </h4>
+                </div>
+            </div>
+            <img class="imagen-capital24 diapositivas_3 w3-animate-left" src="{% static 'img/kardex.png' %}" alt="Kardex Mensual" />
+
+        </div>
+
+        <div class="contenido-principal">
+            <img class="imagen-capital24 diapositivas_4 w3-animate-right" src="{% static 'img/VENCIMIENTO.png' %}" alt="Terminación Contratos" />
+
+            <div class="texto-principal ">
+                <div>
+                    <h3>Vencimiento de Contratos</h3>
+                    <h4>
+                        Gestiona los contratos de los colaboradores conociendo los próximos a vencer con 15 días de anticipación
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenido-principal">
+            <div class="texto-principal ">
+                <div>
+                    <h3>Atención a Clientes</h3>
+                    <h4>
+                        Conecta con la nueva área para experiencias de clientes Capital People, un HelpDesk que mejora la experiencia de servicio para ti y tus colaboradores
+                    </h4>
+                </div>
+            </div>
+            <img class="imagen-capital24 diapositivas_5 w3-animate-left" src="{% static 'img/ATENCION.png' %}" alt="Contacto Capital24" />
+            <img class="imagen-capital24 diapositivas_5 w3-animate-left" src="{% static 'img/atencion2.png' %}" alt="Tarjeta Contacto" />
+
+        </div>
+    </main>
+
+    <hr class="contenedor seccion" />
+
+
+    <section id="opinion" class="contenedor seccion ">
+        <h1 id="titulo-movil">Nuestros usuarios opinan</h1>
+        <ul class="testimoniales-funciones clearfix">
+            <li>
+                <div class="testimoniales-app">
+                    <img src="{% static 'img/testimonial_1.jpg' %}" alt="Inicio Capital24" />
+                    <p>Rapidez</p>
+                    <i class="fas fa-quote-left fa-2x testimonial-i"></i>
+                    <p id="testimonial">
+                        Te permite conocer fácil y rápidamente información que en una base de datos podría ser más complicada buscar y controlar
+                    </p>
+                    <cite>Socio Capital People <span>Directora de Finanzas</span></cite>
+                </div>
+            </li>
+            <li>
+                <div class="testimoniales-app">
+                    <img src="{% static 'img/testimonial_2.jpg' %}" alt="Login Capital24" />
+
+                    <p>Toma de Decisiones</p>
+                    <i class="fas fa-quote-left fa-2x testimonial-i"></i>
+                    <p id="testimonial">
+                        Ahorro el tiempo a invertir en la búsqueda y daremos respuesta mas rápida a los empleados o internas para análisis y tomas de decisión
+                    </p>
+                    <cite>Socio Capital People <span>Gerente de Capacitación</span></cite
+          >
+        </div>
+      </li>
+      <li>
+        <div class="testimoniales-app">
+          <img
+            src="{% static 'img/testimonial_3.jpg' %}"
+            alt="Menu Capital24"
+          />
+          <p>
+            Intuitiva
+          </p>
+          <i class="fas fa-quote-left fa-2x testimonial-i"></i>
+          <p id="testimonial">Tener a la mano información importante</p>
+          <cite
+            >Colaborador Capital People
+            <span>Analista de Recursos Humanos</span></cite
+          >
+        </div>
+      </li>
+    </ul>
+  </section>
+
+
+
+
+
+
+
+
+    <footer id="contacto" class="site-footer seccion">
+      <div class="contenedor clearfix">
+        <div class="footer-informacion">
+          <h5>Sobre <span>Capital24</span></h5>
+          <p>
+            Consulta desde tu celular información relevante de tu negocio para
+            la rápida toma de decisiones
+          </p>
+        </div>
+        <div class="grupo-capital">
+          <h5>Capital<span> People</span></h5>
+          <ul>
+            <li>
+              <a href="https://capitalpeople.mx">
+                <img
+                  src="{% static 'img/logo_cp.png' %}"
+                  id="proporcion-img"
+                  alt="Capital People"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'home' %}">
+                <img
+                  src="{% static 'img/logo_cp24.png' %}"
+                  alt="Capital24"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://capitalacademy.mx">
+                <img
+                  id="proporcion-img"
+                  src="{% static 'img/logo_academy.png' %}"
+                  alt="Capital Academy"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tdu.com.mx/capitalpeople/">
+                <img
+                  id="proporcion-img-2"
+                  src="{% static 'img/log_4u.png' %}"
+                  alt="Capital Academy"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contacto y <span>Atención al Cliente</span></h5>
+          <div class="contacto">
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+            <a href="https://goo.gl/maps/247dzGtVKdjXiXPHA">
+              <p>
+                Herschel 152, Col. Anzures Miguel Hidalgo, CP 11590, Ciudad de
+                Mexico
+              </p>
+            </a>
+          </div>
+
+          <div class="contacto">
+            <i class="fas fa-phone fa-2x"></i>
+            <p>(52) 5276-8570</p>
+          </div>
+
+          <div class="contacto">
+            <i class="fas fa-envelope-open-text fa-2x"></i>
+            <a
+              href="mailto:ayuda@capital24.mx?Subject=Ayuda Capital24 - sitio web"
+            >
+              <p>ayuda@capital24.mx</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      Todos los Derechos Reservados Capital People &copy;
+      <center><a href="{% url 'aviso_privacidad' %}" target="_blank">AVISO DE PRIVACIDAD</a></center>
+    </div>
+
+   
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("diapositivas");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 4000); // Change image every 2 seconds
+      }
+
+      var myIndex_1 = 0;
+      carousel_1();
+
+      function carousel_1() {
+        var i_1;
+        var x_1 = document.getElementsByClassName("diapositivas_1");
+        for (i_1 = 0; i_1 < x_1.length; i_1++) {
+          x_1[i_1].style.display = "none";
+        }
+        myIndex_1++;
+        if (myIndex_1 > x_1.length) {
+          myIndex_1 = 1;
+        }
+        x_1[myIndex_1 - 1].style.display = "block";
+        setTimeout(carousel_1, 4000); // Change image every 2 seconds
+      }
+
+      var myIndex_2 = 0;
+      carousel_2();
+
+      function carousel_2() {
+        var i_2;
+        var x_2 = document.getElementsByClassName("diapositivas_2");
+        for (i_2 = 0; i_2 < x_2.length; i_2++) {
+          x_2[i_2].style.display = "none";
+        }
+        myIndex_2++;
+        if (myIndex_2 > x_2.length) {
+          myIndex_2 = 1;
+        }
+        x_2[myIndex_2 - 1].style.display = "block";
+        setTimeout(carousel_2, 4000); // Change image every 2 seconds
+      }
+
+      var myIndex_3 = 0;
+      carousel_3();
+
+      function carousel_3() {
+        var i_3;
+        var x_3 = document.getElementsByClassName("diapositivas_3");
+        for (i_3 = 0; i_3 < x_3.length; i_3++) {
+          x_3[i_3].style.display = "none";
+        }
+        myIndex_3++;
+        if (myIndex_3 > x_3.length) {
+          myIndex_3 = 1;
+        }
+        x_3[myIndex_3 - 1].style.display = "block";
+        setTimeout(carousel_3, 4000); // Change image every 2 seconds
+      }
+
+      var myIndex_4 = 0;
+      carousel_4();
+
+      function carousel_4() {
+        var i_4;
+        var x_4 = document.getElementsByClassName("diapositivas_4");
+        for (i_4 = 0; i_4 < x_4.length; i_4++) {
+          x_4[i_4].style.display = "none";
+        }
+        myIndex_4++;
+        if (myIndex_4 > x_4.length) {
+          myIndex_4 = 1;
+        }
+        x_4[myIndex_4 - 1].style.display = "block";
+        setTimeout(carousel_4, 4000); // Change image every 2 seconds
+      }
+
+      var myIndex_5 = 0;
+      carousel_5();
+
+      function carousel_5() {
+        var i_5;
+        var x_5 = document.getElementsByClassName("diapositivas_5");
+        for (i_5 = 0; i_5 < x_5.length; i_5++) {
+          x_5[i_5].style.display = "none";
+        }
+        myIndex_5++;
+        if (myIndex_5 > x_5.length) {
+          myIndex_5 = 1;
+        }
+        x_5[myIndex_5 - 1].style.display = "block";
+        setTimeout(carousel_5, 4000); // Change image every 2 seconds
+      }
+    </script>
+
+<script src="{% static 'js/vendor/modernizr-3.7.1.min.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
+        );
+    </script>
+   <script src="{% static 'js/plugins.js' %}"></script>
+   <script src="{% static 'js/main.js' %}"></script>
+
+   <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function() {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
+</html>
